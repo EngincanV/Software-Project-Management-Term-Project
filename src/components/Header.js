@@ -8,8 +8,8 @@ function HeaderComponent(){
         <Layout>
             <Header className="header">
                 <Row>
-                    <Col span={6}> <div className="logo">Machine Learning for Kids</div></Col>
-                    <Col span={18} style={{textAlign:"right"}}>
+                    <Col span={10}> <div className="logo">Machine Learning for Kids</div></Col>
+                    <Col span={14} style={{textAlign:"right"}}>
                         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
                             <Menu.Item key="1">Anasayfa</Menu.Item>
                             <Menu.Item key="2">Acemi</Menu.Item>
