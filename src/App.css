@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Seaweed+Script);
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.logo{
+  font-family: "Seaweed Script";
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+}
+
+.gameBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.game{
+  margin: 25px !important;
+  width: 400px;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px !important;
+  color:#fff !important;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 30px;
 }
