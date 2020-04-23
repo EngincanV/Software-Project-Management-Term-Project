@@ -73,7 +73,7 @@ function Main() {
                     <p>Make a Rock, Paper, Scissors game in Scratch that learns to recognise hand shapes.
                     Teach a computer to recognise shapes</p>
                     <Button ghost><Link to="rock-paper-scissors">Start Game</Link></Button>
-                    <div style={{ marginTop: "20px" }}> <Tag color="pink"> Emülatör</Tag> <Tag color="green"> Acemi </Tag></div>
+                    <div style={{ marginTop: "20px" }}> <Tag color="orange"> Emülatör</Tag> <Tag color="green"> Acemi </Tag></div>
 
                 </Card>
 

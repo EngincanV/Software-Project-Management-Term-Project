@@ -26,10 +26,10 @@ function countDown() {
 }
 
 const RockPaperScissor = () => {
-    const gameOptions = ['rock', 'paper', 'scissors'];
+    const gameOptions = ['taş', 'kağıt', 'makas'];
 
-    const [userChoice, setUserChoice] = useState("");
-    const [userScore, setUserScore] = useState(0);
+    const [playerChoice, setPlayerChoice] = useState("");
+    const [playerScore, setPlayerScore] = useState(0);
     const [computerChoice, setComputerChoice] = useState("");
     const [computerScore, setComputerScore] = useState(0);
     const [message, setMessage] = useState("");
@@ -52,8 +52,8 @@ const RockPaperScissor = () => {
         else if ((user === gameOptions[0] && computer === gameOptions[2]) ||
             (user === gameOptions[1] && computer === gameOptions[0]) ||
             (user === gameOptions[2] && computer === gameOptions[1])) {
-            setMessage("Kullanıcı Kazandı.");
-            setUserScore(prevScore => ++prevScore);
+            setMessage("Oyuncu Kazandı.");
+            setPlayerScore(prevScore => ++prevScore);
         }
 
         else if ((user === gameOptions[2] && computer === gameOptions[0]) ||
@@ -67,7 +67,7 @@ const RockPaperScissor = () => {
     const handleClick = (e) => {
         const currentChoice = e.currentTarget.getAttribute("title");
         const computerCurrentChoice = computerRandomChoice();
-        setUserChoice(currentChoice);
+        setPlayerChoice(currentChoice);
         checkWinner(currentChoice, computerCurrentChoice);
     }
 
@@ -82,8 +82,8 @@ const RockPaperScissor = () => {
             <div>
                 <Descriptions column={2} bordered size="default" style={{ width: "60vw", marginLeft: "auto", marginRight: "auto", marginTop: "10vh" }} layout="horizontal">
                     <Descriptions.Item style={{ fontWeight: "bold" }} label="Bilgisayar Puan "><b>{computerScore}</b></Descriptions.Item>
-                    <Descriptions.Item style={{ fontWeight: "bold" }} label="Oyuncu Puan  "><b>{userScore}</b></Descriptions.Item>
-                    {userChoice ? <Descriptions.Item label="Seçimler "><b>{computerChoice + " - " + userChoice}</b></Descriptions.Item> : null}
+                    <Descriptions.Item style={{ fontWeight: "bold" }} label="Oyuncu Puan  "><b>{playerScore}</b></Descriptions.Item>
+                    {playerChoice ? <Descriptions.Item label="Seçimler " style={{ fontWeight: "bold" }}><b>{computerChoice + " - " + playerChoice}</b></Descriptions.Item> : null}
                 </Descriptions>
             </div>
         </div>
