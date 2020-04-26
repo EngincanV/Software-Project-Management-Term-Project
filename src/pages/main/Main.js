@@ -62,10 +62,10 @@ function Main() {
 
                 </Card>
                 <Card className="game" style={{ backgroundColor: "red" }} >
-                    <div className="title">Journey to school</div>
+                    <div className="title">Kiwi or Stoat</div>
                     <p>Train the computer to be able to predict how you travel to school in the morning. Teach a computer to make predictions</p>
-                    <Button ghost> Start Game</Button>
-                    <div style={{ marginTop: "20px" }}> <Tag color="pink"> Simülatör</Tag> <Tag color="green"> Orta Düzey </Tag></div>
+                    <Button ghost><Link to="kiwi-or-stoat"> Start Game</Link></Button>
+                    <div style={{ marginTop: "20px" }}> <Tag color="orange"> Emülatör</Tag> <Tag color="green"> Orta Düzey </Tag></div>
 
                 </Card>
                 <Card className="game" style={{ backgroundColor: "green" }} >

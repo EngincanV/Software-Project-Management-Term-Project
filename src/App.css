@@ -64,3 +64,18 @@
   font-size: 28px;
   margin-bottom: 30px;
 }
+
+.image_picker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image_picker > .responsive {
+  padding: 20px;
+}
+
+.image_picker > .responsive > img {
+  width: 200px !important;
+  height: 200px !important;
+}
