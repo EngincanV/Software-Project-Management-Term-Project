@@ -8,6 +8,7 @@ import Main from './pages/main/Main'
 //games
 import RockPaperScissor from './pages/games/RockPaperScissor';
 import KiwiOrStoat from './pages/games/KiwiOrStoat';
+import TouristInfo from './pages/games/TouristInfo'
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <Route exact path="/" component={Main} />
           <Route path="/rock-paper-scissors" component={RockPaperScissor} />
           <Route path="/kiwi-or-stoat" component={KiwiOrStoat} />
+          <Route path="/tourist-info" component={TouristInfo} />
+
         </Switch>
       </Router>
        

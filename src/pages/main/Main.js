@@ -8,9 +8,9 @@ function Main() {
         <div style={{ padding: "50px" }}>
             <Content className="gameBox">
                 <Card className="game" style={{ backgroundColor: "purple" }} >
-                    <div className="title">Smart Classroom</div>
-                    <p>Create a smart assistant in Scratch that lets you control virtual devices. Teach a computer to recognise the meaning of your commands</p>
-                    <Button ghost> Start Game</Button>
+                    <div className="title">Tourist Info</div>
+                    <p>Create a mobile app in Scratch that recommends tourist attractions based on people's interests. Teach a computer to make recommendations</p>
+                    <Button ghost> <Link to="tourist-info"> Start Game </Link> </Button>
                     <div style={{ marginTop: "20px" }}> <Tag color="orange">Emülatör</Tag> <Tag color="cyan"> Acemi </Tag></div>
                 </Card>
                 <Card className="game" style={{ backgroundColor: "blue" }} >
