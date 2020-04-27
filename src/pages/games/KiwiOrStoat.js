@@ -81,7 +81,7 @@ const KiwiOrStoat = () => {
                 images={imageList.map((image, i) => ({ src: image, value: i }))}
                 onPick={onPick} />
             <br />
-            <Button disabled={image ? "" : "true"} type="primary" shape="round" size="large" onClick={handleClick}>
+            <Button disabled={image !==null ? "" : "true"} type="primary" shape="round" size="large" onClick={handleClick}>
                 Onayla
             </Button>
         </div>
