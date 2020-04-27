@@ -79,3 +79,10 @@
   width: 200px !important;
   height: 200px !important;
 }
+.modalContent{
+  display: flex;
+  flex-direction: column;
+}
+.modalContent img{
+  object-fit: cover;
+}
