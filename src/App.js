@@ -4,8 +4,12 @@ import './App.css';
 import "antd/dist/antd.css";
 import HeaderComponent from './components/Header'
 import Main from './pages/main/Main'
+
+//games
 import RockPaperScissor from './pages/games/RockPaperScissor';
 import { Chatbot } from './pages/games/Chatbot';
+import KiwiOrStoat from './pages/games/KiwiOrStoat';
+import TouristInfo from './pages/games/TouristInfo'
 
 function App() {
   return (
@@ -16,6 +20,8 @@ function App() {
           <Route exact path="/" component={Main} />
           <Route path="/rock-paper-scissors" component={RockPaperScissor} />
           <Route path="/chatbots" component={Chatbot} />
+          <Route path="/kiwi-or-stoat" component={KiwiOrStoat} />
+          <Route path="/tourist-info" component={TouristInfo} />
         </Switch>
       </Router>
        

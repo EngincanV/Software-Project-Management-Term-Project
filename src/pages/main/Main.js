@@ -8,9 +8,9 @@ function Main() {
         <div style={{ padding: "50px" }}>
             <Content className="gameBox">
                 <Card className="game" style={{ backgroundColor: "purple" }} >
-                    <div className="title">Smart Classroom</div>
-                    <p>Create a smart assistant in Scratch that lets you control virtual devices. Teach a computer to recognise the meaning of your commands</p>
-                    <Button ghost> Start Game</Button>
+                    <div className="title">Tourist Info</div>
+                    <p>Create a mobile app in Scratch that recommends tourist attractions based on people's interests. Teach a computer to make recommendations</p>
+                    <Button ghost> <Link to="tourist-info"> Start Game </Link> </Button>
                     <div style={{ marginTop: "20px" }}> <Tag color="orange">Emülatör</Tag> <Tag color="cyan"> Acemi </Tag></div>
                 </Card>
                 <Card className="game" style={{ backgroundColor: "blue" }} >
@@ -55,18 +55,17 @@ function Main() {
 
                 </Card>
                 <Card className="game" style={{ backgroundColor: "blue" }} >
-                    <div className="title">Face Lock</div>
-                    <p>Make a phone in Scratch that unlocks if it recognises your face. Teach a computer to recognise faces</p>
-                    <Button ghost> Start Game</Button>
-                    <div style={{ marginTop: "20px" }}> <Tag color="orange"> Emülatör</Tag> <Tag color="red"> İleri Düzey </Tag></div>
-
-                </Card>
-                <Card className="game" style={{ backgroundColor: "red" }} >
                     <div className="title">Chatbots</div>
                     <p>Create a chatbot that can answer questions about a topic of your choice.</p>
                     <Button ghost><Link to="chatbots">Start Game</Link></Button>
                     <div style={{ marginTop: "20px" }}> <Tag color="pink"> Emülatör</Tag> <Tag color="green"> Orta Düzey </Tag></div>
 
+                </Card>
+                <Card className="game" style={{ backgroundColor: "red" }} >
+                    <div className="title">Kiwi or Stoat</div>
+                    <p>Train the computer to be able to predict how you travel to school in the morning. Teach a computer to make predictions</p>
+                    <Button ghost><Link to="kiwi-or-stoat"> Start Game</Link></Button>
+                    <div style={{ marginTop: "20px" }}> <Tag color="orange"> Emülatör</Tag> <Tag color="green"> Orta Düzey </Tag></div>
                 </Card>
                 <Card className="game" style={{ backgroundColor: "green" }} >
                     <div className="title">Rock Paper Scissors</div>
