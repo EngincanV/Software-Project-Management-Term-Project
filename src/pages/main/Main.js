@@ -62,10 +62,10 @@ function Main() {
 
                 </Card>
                 <Card className="game" style={{ backgroundColor: "red" }} >
-                    <div className="title">Journey to school</div>
-                    <p>Train the computer to be able to predict how you travel to school in the morning. Teach a computer to make predictions</p>
-                    <Button ghost> Start Game</Button>
-                    <div style={{ marginTop: "20px" }}> <Tag color="pink"> Simülatör</Tag> <Tag color="green"> Orta Düzey </Tag></div>
+                    <div className="title">Chatbots</div>
+                    <p>Create a chatbot that can answer questions about a topic of your choice.</p>
+                    <Button ghost><Link to="chatbots">Start Game</Link></Button>
+                    <div style={{ marginTop: "20px" }}> <Tag color="pink"> Emülatör</Tag> <Tag color="green"> Orta Düzey </Tag></div>
 
                 </Card>
                 <Card className="game" style={{ backgroundColor: "green" }} >

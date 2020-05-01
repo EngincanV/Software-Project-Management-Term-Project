@@ -5,6 +5,7 @@ import "antd/dist/antd.css";
 import HeaderComponent from './components/Header'
 import Main from './pages/main/Main'
 import RockPaperScissor from './pages/games/RockPaperScissor';
+import { Chatbot } from './pages/games/Chatbot';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Main} />
           <Route path="/rock-paper-scissors" component={RockPaperScissor} />
+          <Route path="/chatbots" component={Chatbot} />
         </Switch>
       </Router>
        

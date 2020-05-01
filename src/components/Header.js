@@ -2,7 +2,7 @@ import React from 'react'
 import { Layout, Menu,  Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 
-const { Header, Content, Sider } = Layout;
+const { Header } = Layout;
 
 function HeaderComponent(){
     return(
@@ -15,7 +15,7 @@ function HeaderComponent(){
                             <Menu.Item key="1"><Link to="/">Anasayfa</Link></Menu.Item>
                             <Menu.Item key="2">Acemi</Menu.Item>
                             <Menu.Item key="3">Orta Düzey</Menu.Item>
-                            <Menu.Item key="3">İleri Seviye</Menu.Item>
+                            <Menu.Item key="4">İleri Seviye</Menu.Item>
                         </Menu>
                     </Col>
                 </Row>
