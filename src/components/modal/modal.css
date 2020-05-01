@@ -1,0 +1,53 @@
+.modal-wrapper {
+    animation: fadeIn .7s;
+    background: rgba(0, 0, 0, .6);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: all .7s ease;
+    width: 100%;
+    z-index: 1;
+  
+}
+
+.modal-main {
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-around;
+    left: 50%;
+    max-width: 100%;
+    padding: 40px 30px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 541px;
+}
+
+.buttons {
+    align-self: flex-end;
+}
+
+.block {
+    display: block;
+  }
+  
+  .none {
+    display: none;
+  }
+
+  @keyframes fadeIn {
+
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  

@@ -55,10 +55,10 @@ function Main() {
 
                 </Card>
                 <Card className="game" style={{ backgroundColor: "blue" }} >
-                    <div className="title">Face Lock</div>
-                    <p>Make a phone in Scratch that unlocks if it recognises your face. Teach a computer to recognise faces</p>
-                    <Button ghost> Start Game</Button>
-                    <div style={{ marginTop: "20px" }}> <Tag color="orange"> Emülatör</Tag> <Tag color="red"> İleri Düzey </Tag></div>
+                    <div className="title">Chatbots</div>
+                    <p>Create a chatbot that can answer questions about a topic of your choice.</p>
+                    <Button ghost><Link to="chatbots">Start Game</Link></Button>
+                    <div style={{ marginTop: "20px" }}> <Tag color="pink"> Emülatör</Tag> <Tag color="green"> Orta Düzey </Tag></div>
 
                 </Card>
                 <Card className="game" style={{ backgroundColor: "red" }} >
@@ -66,7 +66,6 @@ function Main() {
                     <p>Train the computer to be able to predict how you travel to school in the morning. Teach a computer to make predictions</p>
                     <Button ghost><Link to="kiwi-or-stoat"> Start Game</Link></Button>
                     <div style={{ marginTop: "20px" }}> <Tag color="orange"> Emülatör</Tag> <Tag color="green"> Orta Düzey </Tag></div>
-
                 </Card>
                 <Card className="game" style={{ backgroundColor: "green" }} >
                     <div className="title">Rock Paper Scissors</div>
