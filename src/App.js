@@ -10,6 +10,7 @@ import RockPaperScissor from './pages/games/RockPaperScissor';
 import { Chatbot } from './pages/games/Chatbot';
 import KiwiOrStoat from './pages/games/KiwiOrStoat';
 import TouristInfo from './pages/games/TouristInfo'
+import MakeMeHappy from './pages/games/MakeMeHappy';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/chatbots" component={Chatbot} />
           <Route path="/kiwi-or-stoat" component={KiwiOrStoat} />
           <Route path="/tourist-info" component={TouristInfo} />
+          <Route path="/make-me-happy" component={MakeMeHappy} />
         </Switch>
       </Router>
        

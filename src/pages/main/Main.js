@@ -16,7 +16,7 @@ function Main() {
                 <Card className="game" style={{ backgroundColor: "blue" }} >
                     <div className="title">Make me happy</div>
                     <p>Create a character in Scratch that smiles if you say nice things to it and cries if you say mean things to it. Teach a computer to recognise compliments and insults</p>
-                    <Button ghost> Start Game</Button>
+                    <Button ghost><Link to="make-me-happy"> Start Game</Link></Button>
                     <div style={{ marginTop: "20px" }}> <Tag color="pink"> Simülatör</Tag> <Tag color="green"> Orta Düzey </Tag></div>
 
                 </Card>
