@@ -10,7 +10,7 @@ function Main() {
                 <Card className="game" style={{ backgroundColor: "purple" }} >
                     <div className="title">Tourist Info</div>
                     <p>Create a mobile app in Scratch that recommends tourist attractions based on people's interests. Teach a computer to make recommendations</p>
-                    <Button ghost> <Link to="tourist-info"> Start Game </Link> </Button>
+                    <Button ghost><Link to="tourist-info">Start Game</Link></Button>
                     <div style={{ marginTop: "20px" }}> <Tag color="orange">Emülatör</Tag> <Tag color="cyan"> Acemi </Tag></div>
                 </Card>
                 <Card className="game" style={{ backgroundColor: "blue" }} >
@@ -48,9 +48,9 @@ function Main() {
 
                 </Card>
                 <Card className="game" style={{ backgroundColor: "purple" }} >
-                    <div className="title">Car or cup</div>
-                    <p>Train the computer to be able to sort photos into groups. Teach a computer to recognise pictures of objects</p>
-                    <Button ghost> Start Game</Button>
+                    <div className="title">Sorting Hat</div>
+                    <p>Create a Sorting Hat like in Harry Potter, that puts you in a school House based on what you say.</p>
+                    <Button ghost><Link to="sorting-hat">Start Game</Link></Button>
                     <div style={{ marginTop: "20px" }}> <Tag color="pink"> Simülatör</Tag> <Tag color="green"> Acemi </Tag></div>
 
                 </Card>

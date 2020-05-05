@@ -11,6 +11,7 @@ import { Chatbot } from './pages/games/Chatbot';
 import KiwiOrStoat from './pages/games/KiwiOrStoat';
 import TouristInfo from './pages/games/TouristInfo'
 import MakeMeHappy from './pages/games/MakeMeHappy';
+import SortingHat from './pages/games/SortingHat/sortinghat';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/kiwi-or-stoat" component={KiwiOrStoat} />
           <Route path="/tourist-info" component={TouristInfo} />
           <Route path="/make-me-happy" component={MakeMeHappy} />
+          <Route path="/sorting-hat" component={SortingHat} />
         </Switch>
       </Router>
        
