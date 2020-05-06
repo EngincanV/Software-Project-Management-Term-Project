@@ -1,17 +1,18 @@
 import React from 'react';
-import {Route, Switch, BrowserRouter as Router} from 'react-router-dom'
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-import "antd/dist/antd.css";
-import HeaderComponent from './components/Header'
-import Main from './pages/main/Main'
+import 'antd/dist/antd.css';
+import HeaderComponent from './components/Header';
+import Main from './pages/main/Main';
 
 //games
 import RockPaperScissor from './pages/games/RockPaperScissor';
 import { Chatbot } from './pages/games/Chatbot';
 import KiwiOrStoat from './pages/games/KiwiOrStoat';
-import TouristInfo from './pages/games/TouristInfo'
+import TouristInfo from './pages/games/TouristInfo';
 import MakeMeHappy from './pages/games/MakeMeHappy';
 import SortingHat from './pages/games/SortingHat/sortinghat';
+import JudgeBook from './pages/games/JudgeBook';
 
 function App() {
   return (
@@ -26,11 +27,10 @@ function App() {
           <Route path="/tourist-info" component={TouristInfo} />
           <Route path="/make-me-happy" component={MakeMeHappy} />
           <Route path="/sorting-hat" component={SortingHat} />
+          <Route path="/judge-a-book" component={JudgeBook} />
         </Switch>
       </Router>
-       
     </div>
-
   );
 }
 
