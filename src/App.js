@@ -13,6 +13,8 @@ import TouristInfo from './pages/games/TouristInfo';
 import MakeMeHappy from './pages/games/MakeMeHappy';
 import SortingHat from './pages/games/SortingHat/sortinghat';
 import JudgeBook from './pages/games/JudgeBook';
+import Titanic from './pages/games/Titanic';
+
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
           <Route path="/make-me-happy" component={MakeMeHappy} />
           <Route path="/sorting-hat" component={SortingHat} />
           <Route path="/judge-a-book" component={JudgeBook} />
+          <Route path="/Titanic" component={Titanic} />
         </Switch>
       </Router>
     </div>
