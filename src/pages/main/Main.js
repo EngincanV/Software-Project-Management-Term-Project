@@ -70,7 +70,9 @@ function Main() {
                         Create a Python program that can predict who survived the sinking of
                         the Titanic. Teach a computer to predict outcomes
           </p>
-                    <Button ghost> Start Game</Button>
+                    <Button ghost>
+                        <Link to="titanic">Start Game</Link>
+                    </Button>
                     <div style={{ marginTop: '20px' }}>
                         {' '}
                         <Tag color="orange"> Emülatör</Tag>{' '}

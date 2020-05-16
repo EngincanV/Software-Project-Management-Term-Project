@@ -11,9 +11,9 @@ function Titanic(){
     const [TCost, setTCost] = useState("")
 
     const deadorAlive = (data) => {
-        axios.post('https://machinelearningdeploy.herokuapp.com/predict',  data )
+        return axios.post('https://machinelearningdeploy.herokuapp.com/predict',  data )
         .then( (response) =>  {
-          console.log(response)
+          console.log(response.data)
           return response.data
         }).catch(function (error) {
             console.log(error)
@@ -24,18 +24,19 @@ function Titanic(){
         if(TClass !== "" && TAge !== "" && TCount !== "" && TParent !== "" && TCost !== "") {
             var bodyFormData = new FormData();
             bodyFormData.set('Age', TAge);
-            let result = deadorAlive(bodyFormData)
-            if(result == "Live"){
-                Modal.success({
-                    title: 'Titanik',
-                    content: "Belirttiğiniz Yolcu Modelin Tahminine Göre Hayatta Kalmıştır.",
-                });
-            }else{
-                Modal.warning({
-                    title: 'Titanik',
-                    content: "Belirttiğiniz Yolcu Modelin Tahminine Göre Hayatını Kaybetmiştir.",
-                });
-            }              
+            deadorAlive(bodyFormData).then(result => {
+                if(result === "Live"){
+                    Modal.success({
+                        title: 'Titanik',
+                        content: "Belirttiğiniz Yolcu Modelin Tahminine Göre Hayatta Kalmıştır.",
+                    });
+                }else{
+                    Modal.warning({
+                        title: 'Titanik',
+                        content: "Belirttiğiniz Yolcu Modelin Tahminine Göre Hayatını Kaybetmiştir.",
+                    });
+                }       
+            });
         }else{
             Modal.error({
                 title: 'HATA !',
