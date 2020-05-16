@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Button, Modal } from "antd"
-
+import axios from 'axios'
 //images
 import titanic from "../../assets/titanic/1.jpg";
 function Titanic(){
@@ -10,20 +10,32 @@ function Titanic(){
     const [TParent, setTParent] = useState("")
     const [TCost, setTCost] = useState("")
 
-
+    const deadorAlive = (data) => {
+        axios.post('https://machinelearningdeploy.herokuapp.com/predict',  data )
+        .then( (response) =>  {
+          console.log(response)
+          return response.data
+        }).catch(function (error) {
+            console.log(error)
+    
+       });
+    }
     const handleClick = () => {
         if(TClass !== "" && TAge !== "" && TCount !== "" && TParent !== "" && TCost !== "") {
-            var rand = Math.floor(Math.random() * Math.floor(2));
-            if(rand == 1)
+            var bodyFormData = new FormData();
+            bodyFormData.set('Age', TAge);
+            let result = deadorAlive(bodyFormData)
+            if(result == "Live"){
                 Modal.success({
                     title: 'Titanik',
                     content: "Belirttiğiniz Yolcu Modelin Tahminine Göre Hayatta Kalmıştır.",
                 });
-            else
+            }else{
                 Modal.warning({
                     title: 'Titanik',
                     content: "Belirttiğiniz Yolcu Modelin Tahminine Göre Hayatını Kaybetmiştir.",
                 });
+            }              
         }else{
             Modal.error({
                 title: 'HATA !',
