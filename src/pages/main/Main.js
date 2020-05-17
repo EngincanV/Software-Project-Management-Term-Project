@@ -19,7 +19,7 @@ function Main() {
                     </Button>
                     <div style={{ marginTop: '20px' }}>
                         {' '}
-                        <Tag color="orange">Emülatör</Tag> <Tag color="cyan"> Acemi </Tag>
+                        <Tag color="pink">Simülatör</Tag> <Tag color="cyan"> Acemi </Tag>
                     </div>
                 </Card>
                 <Card className="game" style={{ backgroundColor: 'blue' }}>
@@ -34,7 +34,7 @@ function Main() {
                     </Button>
                     <div style={{ marginTop: '20px' }}>
                         {' '}
-                        <Tag color="pink"> Simülatör</Tag>{' '}
+                        <Tag color="orange"> Emülatör</Tag>{' '}
                         <Tag color="green"> Orta Düzey </Tag>
                     </div>
                 </Card>
@@ -44,7 +44,7 @@ function Main() {
                         Train the computer to be able to predict how you travel to school in the morning.
                         Teach a computer to make predictions
                     </p>
-                    <Button ghost> Start Game</Button>
+                    <Button ghost><Link to="journey-to-school">Start Game</Link></Button>
                     <div style={{ marginTop: '20px' }}>
                         {' '}
                         <Tag color="pink"> Simülatör</Tag>{' '}
@@ -75,7 +75,7 @@ function Main() {
                     </Button>
                     <div style={{ marginTop: '20px' }}>
                         {' '}
-                        <Tag color="orange"> Emülatör</Tag>{' '}
+                        <Tag color="pink"> Simülatör</Tag>{' '}
                         <Tag color="green"> Orta Düzey </Tag>
                     </div>
                 </Card>
@@ -90,7 +90,7 @@ function Main() {
                     </Button>
                     <div style={{ marginTop: '20px' }}>
                         {' '}
-                        <Tag color="pink"> Simülatör</Tag> <Tag color="green"> Acemi </Tag>
+                        <Tag color="orange"> Emülatör</Tag> <Tag color="green"> Acemi </Tag>
                     </div>
                 </Card>
                 <Card className="game" style={{ backgroundColor: 'blue' }}>
