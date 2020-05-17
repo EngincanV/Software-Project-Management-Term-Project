@@ -67,7 +67,7 @@ const JourneyToSchool = () => {
                     messageDesc = `Yaşı: ${age}, Okula mesafesi: ${distance}m olan öğrenci okula arabayla gidebilir.`;
                 else
                     messageDesc = `Yaşı: ${age}, Okula mesafesi: ${distance}m olan öğrenci okula yürüyerek gidebilir.`;
-                
+
                 countDown(messageDesc, setMessage);
             });
     }
@@ -84,7 +84,7 @@ const JourneyToSchool = () => {
                     label="Yaş"
                 >
                     <Input
-                        type="text"
+                        type="number"
                         placeholder="Yaş"
                         style={{
                         }}
@@ -130,7 +130,7 @@ const JourneyToSchool = () => {
                 <Card
                     hoverable
                     style={{ width: "40vw", display: "inline-block", margin: 20 }}
-                    cover={<img alt="example" src="https://i.pinimg.com/originals/a7/d7/7b/a7d77bc9b4e0ce9520dcd97c71b03dda.png" height="300vh"/>}
+                    cover={<img alt="example" src="https://i.pinimg.com/originals/a7/d7/7b/a7d77bc9b4e0ce9520dcd97c71b03dda.png" height="300vh" />}
                 >
                     <Meta title="Journey To School" description={message ? message : "Lütfen gerekli bilgileri giriniz!"} />
                 </Card>
