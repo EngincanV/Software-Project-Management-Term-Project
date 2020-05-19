@@ -1,49 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, Tag, Button, Layout } from 'antd';
 import { Link } from 'react-router-dom';
+import axios from "axios";
+
+const backgroundColors = ["purple", "blue", "red", "green", "orange", "grey"];
 
 const { Content } = Layout;
 function Main() {
-    return (
-        <div style={{ padding: '50px' }}>
-            <Content className="gameBox">
-                <Card className="game" style={{ backgroundColor: 'purple' }}>
-                    <div className="title">Tourist Info</div>
+    const [list, setList] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://softwaremanagementdatabase.herokuapp.com/GetGames", { headers: { 'Access-Control-Allow-Origin': "*" } })
+            .then(data => setList(data.data.results))
+            .catch(err => console.log("err"))
+    }, []);
+
+    const gameList = () => {
+        // eslint-disable-next-line no-unused-expressions
+        list ? list.map(game => {
+            return (
+                <Card className="game" style={{ backgroundColor: backgroundColors[Math.floor(Math.random() * backgroundColors.length)] }}>
+                    <div className="title">{game.GameName}</div>
                     <p>
-                        Create a mobile app in Scratch that recommends tourist attractions
-                        based on people's interests. Teach a computer to make
-                        recommendations
-          </p>
-                    <Button ghost>
-                        <Link to="tourist-info">Start Game</Link>
-                    </Button>
-                    <div style={{ marginTop: '20px' }}>
-                        {' '}
-                        <Tag color="orange">Emülatör</Tag> <Tag color="cyan"> Acemi </Tag>
-                    </div>
-                </Card>
-                <Card className="game" style={{ backgroundColor: 'blue' }}>
-                    <div className="title">Make me happy</div>
-                    <p>
-                        Create a character in Scratch that smiles if you say nice things to
-                        it and cries if you say mean things to it. Teach a computer to
-                        recognise compliments and insults
-          </p>
-                    <Button ghost>
-                        <Link to="make-me-happy"> Start Game</Link>
-                    </Button>
-                    <div style={{ marginTop: '20px' }}>
-                        {' '}
-                        <Tag color="pink"> Simülatör</Tag>{' '}
-                        <Tag color="green"> Orta Düzey </Tag>
-                    </div>
-                </Card>
-                <Card className="game" style={{ backgroundColor: 'red' }}>
-                    <div className="title">Journey to School!</div>
-                    <p>
-                        Train the computer to be able to predict how you travel to school in the morning.
-                        Teach a computer to make predictions
+                        {game.GameDescription}
                     </p>
+
                     <Button ghost> Start Game</Button>
                     <div style={{ marginTop: '20px' }}>
                         {' '}
@@ -99,58 +80,41 @@ function Main() {
                         Create a chatbot that can answer questions about a topic of your
                         choice.
           </p>
+
                     <Button ghost>
-                        <Link to="chatbots">Start Game</Link>
+                        <Link to={game.GameName.toString().replace(" ", "-")}>Start Game</Link>
                     </Button>
                     <div style={{ marginTop: '20px' }}>
                         {' '}
-                        <Tag color="pink"> Emülatör</Tag>{' '}
-                        <Tag color="green"> Orta Düzey </Tag>
+                        <Tag color={game.GameType === "Simülatör" ? "pink" : "orange"}>{game.GameType}</Tag> <Tag color={game.GameLevel === "Acemi" ? "cyan" : game.GameLevel === "Orta Düzey" ? "green" : "red"}> {game.GameLevel} </Tag>
                     </div>
                 </Card>
-                <Card className="game" style={{ backgroundColor: 'red' }}>
-                    <div className="title">Kiwi or Stoat</div>
-                    <p>
-                        Train the computer to be able to predict how you travel to school in
-                        the morning. Teach a computer to make predictions
-          </p>
-                    <Button ghost>
-                        <Link to="kiwi-or-stoat"> Start Game</Link>
-                    </Button>
-                    <div style={{ marginTop: '20px' }}>
-                        {' '}
-                        <Tag color="orange"> Emülatör</Tag>{' '}
-                        <Tag color="green"> Orta Düzey </Tag>
-                    </div>
-                </Card>
-                <Card className="game" style={{ backgroundColor: 'green' }}>
-                    <div className="title">Rock Paper Scissors</div>
-                    <p>
-                        Make a Rock, Paper, Scissors game in Scratch that learns to
-                        recognise hand shapes. Teach a computer to recognise shapes
-          </p>
-                    <Button ghost>
-                        <Link to="rock-paper-scissors">Start Game</Link>
-                    </Button>
-                    <div style={{ marginTop: '20px' }}>
-                        {' '}
-                        <Tag color="orange"> Emülatör</Tag> <Tag color="green"> Acemi </Tag>
-                    </div>
-                </Card>
-                <Card className="game" style={{ backgroundColor: 'gray' }}>
-                    <div className="title">Judge a Book</div>
-                    <p>
-                        Make a game in Scratch to test whether it really is possible to
-                        judge a book by its cover.
-          </p>
-                    <Button ghost>
-                        <Link to="judge-a-book">Start Game</Link>
-                    </Button>
-                    <div style={{ marginTop: '20px' }}>
-                        {' '}
-                        <Tag color="orange"> Emülatör</Tag> <Tag color="green"> Acemi </Tag>
-                    </div>
-                </Card>
+            )
+        }) : <p>Loading ...</p>
+    }
+    return (
+        <div style={{ padding: '50px' }}>
+            <Content className="gameBox">
+                {
+                    list.length >= 1 ? list.map(game => {
+                        console.log(game.GameName.toString().toLowerCase().split)
+                        return (
+                            <Card className="game" style={{ backgroundColor: backgroundColors[Math.floor(Math.random() * backgroundColors.length)] }}>
+                                <div className="title">{game.GameName}</div>
+                                <p>
+                                    {game.GameDescription}
+                                </p>
+                                <Button ghost>
+                                    <Link to={game.GameName.toString().toLowerCase().split(" ").join("-")}>Start Game</Link>
+                                </Button>
+                                <div style={{ marginTop: '20px' }}>
+                                    {' '}
+                                    <Tag color={game.GameType === "Simülatör" ? "pink" : "orange"}>{game.GameType}</Tag> <Tag color={game.GameLevel === "Acemi" ? "cyan" : game.GameLevel === "Orta Düzey" ? "green" : "red"}> {game.GameLevel} </Tag>
+                                </div>
+                            </Card>
+                        )
+                    }) : <p>Oyunlar veri tabanından getiriliyor...</p>
+                }
             </Content>
         </div>
     );
