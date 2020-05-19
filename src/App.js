@@ -13,6 +13,7 @@ import TouristInfo from './pages/games/TouristInfo';
 import MakeMeHappy from './pages/games/MakeMeHappy';
 import SortingHat from './pages/games/SortingHat/sortinghat';
 import JudgeBook from './pages/games/JudgeBook';
+import Chameleon from './pages/games/Chamelon/chamelon';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/make-me-happy" component={MakeMeHappy} />
           <Route path="/sorting-hat" component={SortingHat} />
           <Route path="/judge-a-book" component={JudgeBook} />
+          <Route path="/chameleon" component={Chameleon} />
         </Switch>
       </Router>
     </div>

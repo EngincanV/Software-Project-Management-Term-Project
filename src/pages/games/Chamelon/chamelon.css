@@ -1,0 +1,43 @@
+.chamelon-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#ddd;
+    flex-direction: column;
+   
+}
+
+.inner-frame {
+    width: 600px;
+    height: 600px;
+    margin-bottom: 20px;
+    background: url('../../../assets/dal.jpg') no-repeat;
+    background-position: center center;
+}
+
+.chameleon {
+    position: relative;
+    top: 60px;
+}
+
+.play-bar {
+    width:600px;
+    height: 100px;
+    border:1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+.left-arrow-wrapper img{
+    width: 40px;
+    height: 40px;
+}
+
+.right-arrow-wrapper img {
+    width: 40px;
+    height: 40px;
+    transform: rotate(180deg);
+}

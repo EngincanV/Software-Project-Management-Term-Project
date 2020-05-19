@@ -56,8 +56,10 @@ function Main() {
                     <p>
                         Make a chameleon in Scratch that changes colour to match its
                         background. Teach a computer to recognise colours
-          </p>
-                    <Button ghost> Start Game</Button>
+                     </p>
+                     <Button chameleon>
+                        <Link to="chameleon">Start Game</Link>
+                    </Button>
                     <div style={{ marginTop: '20px' }}>
                         {' '}
                         <Tag color="pink"> Simülatör</Tag>{' '}
